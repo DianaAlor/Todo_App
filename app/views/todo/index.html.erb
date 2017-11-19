@@ -1,14 +1,25 @@
-<h1>Workshop Todo List</h1>
-<ul class="card">
-  <% @todos.each do |todo| %>
-    <li>
-      <input type="checkbox" name=""/>
-      <a href="show/<%= todo.id %>"><%= todo.description %></a>
-      <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
-    </li>
-  <% end %>
+<h1>
+            <img class="company-logo" src="https://public.3.basecamp.com/p/iahgNshn1oKq98sWGf1q89Vo/uploads/511042491/download/CodeNow%20Logo.png"></img>
+        </h1>
+        <h1>Workshop To Do List</h1>
+        <h2>
+            <ul class="card">
+<% @todos.each do |todo| %>
+  <li>
+    <input type="checkbox" name=""/>
+    <a href="/todo/show/<%= todo.id %>"><%= todo.description %></a>
+    <span class="pomodoro-estimate small-pomodoro-estimate"><%= todo.pomodoro_estimate %></span>
+  </li>
+<% end %>
 </ul>
-
 <div id="new-todo-block">
-  <a href="/todo/new" class="button add-new-todo-button" id="add-new-todo-button">Add a todo</a>
+<a href="/todo/new" class="button add-new-todo-button" id="add-new-todo-button">Add a todo</a>
 </div>
+        </h2>
+        <br>
+        <div id="new-todo-block">
+            <input class="text-input" id="new-todo-description" type="text" placeholder="Add a new todo...">
+            <input class="text-input" id="new-pomodoro-estimate" type="number" placeholder="Pomodoro estimate...">
+            <input class="button" id="add-new-todo-button" type="submit" value="Add todo">
+        </div>
+        
