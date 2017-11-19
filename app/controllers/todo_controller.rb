@@ -26,5 +26,8 @@ class TodoController < ApplicationController
   t.destroy
   redirect_to "/todo/index"
   end
+  def index
+  @todos = Todo.all
+  end
 end
 
